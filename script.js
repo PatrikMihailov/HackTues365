@@ -5,6 +5,8 @@ var gender = document.getElementById("gender").value;
 
 
 var BMI = weight/(height/100)*(height/100);
+//var BMI=26;
+//var BMI = weight+height;
 var cal;
 switch (gender) {
   case "male":
