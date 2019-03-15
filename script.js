@@ -18,3 +18,12 @@ switch (gender) {
 function print_bmi(){
   document.getElementById("bmi").innerHTML = BMI;
 }
+
+function hide_second() {
+  document.getElementById("second").style.display = "none";
+}
+
+function change() {
+    document.getElementById("first").style.display = "none";
+    document.getElementById("second").style.display = "block";
+}
