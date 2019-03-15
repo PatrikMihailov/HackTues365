@@ -2,9 +2,10 @@ body{
   margin: 0;
   padding: 0;
   font-style: italic;
-  background: url(image.jpg) repeat;
-  background-size: cover;
-
+  background-image: url("https://wallpaperlayer.com/img/2015/11/blue-triangle-wallpaper-5071-5313-hd-wallpapers.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-attachment:fixed;
 }
 .login-box{
   width: 280px;
@@ -19,9 +20,8 @@ body{
   font-size: 45px;
   margin-bottom: 30px;
   padding: 13px 0;
-
-
 }
+
 .textbox{
   width: 100%;
   overflow: hidden;
@@ -30,11 +30,13 @@ body{
   margin: 8px 0;
   border-bottom: 1px solid #b0c4de;
 }
+
 .textbox i{
   width: 26px;
   float: left;
   text-align: center;
 }
+
 .textbox input{
   border:none;
   outline: none;
@@ -46,8 +48,9 @@ body{
   color: white;
   margin: 10px;
 }
+
 .btn{
-  width:;
+  width:48%;
   background: none;
   font-style: italic;
   border: 2px solid #b0c4de;
@@ -56,6 +59,7 @@ body{
   font-size: 18px;
   cursor: pointer;
 }
+
 .textbox .tooltip{
   visibility: hidden;
   width: 120px;
@@ -69,14 +73,17 @@ body{
   z-index: 1;
   left: 105%;
 }
+
 .textbox:hover .tooltip{
   visibility: visible;
 }
+
 .login-box a{
   text-decoration: none ;
   font-family: sans-serif;
   padding: 5.115px 40px 5.115px 40px;
 }
+
 body {
   font-size: 28px;
 }
