@@ -7,17 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>DietManager</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js" ></script>
+
     </head>
 
     <body>
-      <div id="first">
-      <script>hide_second()</script>
+      <div id="first" style="display:block">
       <form  class="login-box" action="">
             <h1>BMI calculator</h1>
             <div class="textbox">
               <span class="tooltip">Type your username!</span>
-              <input id="height" type="text" placeholder="Height" name="">
+              <input id="height" type="text" placeholder="Height" name="" >
             </div>
             <div class="textbox">
               <span class="tooltip">Type your  here!</span>
@@ -31,16 +30,20 @@
               <span class="tooltip">male or female</span>
               <input id="gender" type="text" placeholder="Biological gender" name="">
             </div>
-              <button type="button" class="btn" onclick=change(first,second)>Calculate</button>
+              <button  type="button" class="btn" onclick=change(first,second)>Calculate</button>
       </form>
     </div>
-    <div id="second">
+    <script src="script.js"></script>
+    <div id="second" style="display:none">
         <script>hide_second()</script>
       <form class="login-box" action="">
          <h1>BMI rate</h1>
 
+         <h3 id="bmi"></h3>
+
        </form>
        <script> print_bmi() </script>
      </div>
+     <script src="script.js"></script>
     </body>
 </html>
