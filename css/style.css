@@ -247,7 +247,7 @@ h1 {
   text-align: center;
   border-width: 9px;
   border-style: solid;
-  border-color: #AEEEEE;
+  border-color: #00bacf;
 }
 
 .row:after {
@@ -265,8 +265,9 @@ h1 {
 }
 
 #container {
-  margin: 30px;
+  margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
+  z-index: 2;
 }

@@ -25,6 +25,7 @@ function Calculate()
   print_bmi(BMI.toFixed(1));
   print_cal(cal);
   change();
+  circle_Progress_Bar();
   color_change((100*BMI)/40);
 
 }
@@ -32,7 +33,6 @@ function Calculate()
 var total_calories=0;
 
 function Cals(arg) {
-  debugger
   switch(arg){
     case "cola":
       total_calories+=parseInt(document.getElementById(arg).value);
@@ -64,6 +64,17 @@ function print_cal(cal){
 
 function color_change(percent){
   var colour = GRADIENT[Math.floor((percent/100)*GRADIENT.length)]; //puska stoinosti ot 0-9, pravi se za indeksi na bar-a i tei
+  document.getElementById("bmi").style.color = colour;
+  document.getElementById("cal").style.color = colour;
+  document.getElementById("bmi").style.fontSize = "55px";
+  document.getElementById("cal").style.fontSize = "55px";
+
+  document.getElementById("recipe").style.borderColor = colour;
+
+  document.getElementById("hg").style.borderColor = colour;
+  document.getElementById("cals").style.borderColor = colour;
+  document.getElementById("bim").style.borderColor = colour;
+
   document.getElementById("bar").style.width = percent + '%';
   document.getElementById("bar").style.backgroundColor = colour;
 }
@@ -83,7 +94,7 @@ function circle_Progress_Bar()
     strokeWidth: 5,
     trailWidth: 2,
     easing: 'easeInOut',
-    duration: 1400,
+    duration: 400,
     text: {
       autoStyleContainer: false
     },
