@@ -4,7 +4,7 @@
     <head>
       <meta charset = "utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Diet Manager</title>
+      <title>Estimation</title>
       <link rel="stylesheet" href="css/style.css">
     </head>
 
@@ -21,24 +21,41 @@
               <input id="age" type="text" placeholder="Age" name="" value="">
             </div>
 
-            <div class="choicebox" >
+            <div class="choicebox">
               <select id="gender">
-                <option value="0" selected>Gender (DropDown)</option>
-                <option  value="1">Female</option>
-                <option  value="2">Male</option>
+                <option value="0">Gender (DropDown)</option>
+                <option value="1">Female</option>
+                <option value="2">Male</option>
               </select>
             </div>
             <p style="text-align: center;"><button onclick=Calculate() class="btn"><span>Generate Diet</span></button>
         </form>
       </div>
 
-      <div id="second" style="display:none">
-        <form class="login-box" action="">
-          <h1>BMI rate</h1>
-          <p id="bmi"></p>
-          <p id="cal"></p>
-        </form>
+      <div id="second" style="display:none; text-align:center; font-family:monospace">
+        <div class="row">
+          <div class="rightcolumn">
+            <div id="recipe">
+              <h2>Recommended Diet</h2>
+            <hr>
+              <p>Sunt in culpa qui officia deserunt mollit anim id est laborum glkjbasdklhfisljchnfwanflknasobgfcnaslichngfmkHGcmsankvnt nkiWAEFIL GB EWINFVGwluewkuconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+          </div>
+          <div class="card" style="width:20%;">
+            <h3>BMI rate</h3>
+            <p id="bmi"></p>
+          </div>
+          <div class="card" style="width:20%;">
+            <h3>Calories</h3>
+            <p id="cal"></p>
+          </div>
+          <div class="card" style="width: 43%">
+           <h2>HEALTH GRAPH</h2>
+           <div class="fakeimg" style="height:200px;">Image</div>
+         </div>
+        </div>
       </div>
+
 
       <script src="js/script.js"></script>
       <script src="js/dropdown.js"></script>
