@@ -1,3 +1,6 @@
+
+circle_Progress_Bar();
+
 function circle_Progress_Bar()
 {
   var container = document.getElementById("container");

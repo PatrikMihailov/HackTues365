@@ -1,6 +1,7 @@
 #container {
+
   margin: 30px;
   width: 200px;
   height: 200px;
-  position: relative;
+  position: fixed;
 }
