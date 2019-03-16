@@ -1,3 +1,5 @@
+const GRADIENT = ['#a8fff9','#1aff1a', '#99ff33', '#d2ff4d','#ffff80','#ffff4d','#ffdb4d','#','#ffcc00','#ff6600','#ff0000'];
+
 function change() {
     document.getElementById("first").style.display = "none";
     document.getElementById("second").style.display = "block";
@@ -23,13 +25,13 @@ function Calculate()
   print_bmi(BMI.toFixed(1));
   print_cal(cal);
   change();
+  color_change((100*BMI)/40);
 
 }
 
 var total_calories=0;
 
 function Cals(arg) {
-debugger
   switch(arg){
     case "cola":
       total_calories+=parseInt(document.getElementById(arg).value);
@@ -58,6 +60,12 @@ function print_cal(cal){
      document.getElementById(to_hide).style.display = "none";
      document.getElementById(to_show).style.display = "block";
  }
+
+function color_change(percent){
+  var colour = GRADIENT[Math.floor((percent/100)*GRADIENT.length)]; //puska stoinosti ot 0-9, pravi se za indeksi na bar-a i tei
+  document.getElementById("bar").style.width = percent + '%';
+  document.getElementById("bar").style.backgroundColor = colour;
+}
  //var sum = 0;
  //var temp = 0;
 
