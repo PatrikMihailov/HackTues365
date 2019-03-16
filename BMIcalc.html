@@ -30,7 +30,6 @@
               </select>
             </div>
             <p style="text-align: center;"><button onclick=Calculate() class="btn"><span>Generate Diet</span></button>
-            <button class="btn" onclick="change_som('first','third')"><span>Check Intake</span></button>
         </form>
       </div>
 
@@ -39,25 +38,24 @@
           <div class="rightcolumn">
             <div id="recipe">
               <h2>Recommended Diet</h2>
-            <hr>
-            <div id="1200cal" style="display: inline-block;">
+            <div id="1200cal" style="display: none;">
 <h1>1200 Cal Diet</h1>
-
+<hr>
 <div>
   <h3>Breakfast</h3>
-  <h4>
-      All-bran cereal (125)
-      Milk (50)
-      Banana (90)
-  </h4>
+  <h6>
+      All-bran cereal (125 kcals)</br>
+      Milk (50 kcals)</br>
+      Banana (90 kcals)</br>
+  </h6>
 </div>
 
 <div>
-  <h1>Snack</h1>
-  <h4>
-      Cucumber (30)
-      Avocado dip (50)
-  </h4>
+  <h3>Snack</h3>
+  <h6>
+      Cucumber (30 kcals)</br>
+      Avocado dip (50 kcals)</br>
+  </h6>
 </div>
 
 <div>
@@ -65,18 +63,18 @@
 </div>
 
 <div>
-  <h1>Lunch</h1>
-  <h4>
-      Grilled cheese with tomato (300)
-      Salad (50)
-  </h4>
+  <h3>Lunch</h3>
+  <h6>
+      Salad (50 kcals)</br>
+      Grilled cheese with tomatoes (300 kcals)</br>
+  </h6>
 </div>
 
 <div>
-  <h1>Snack</h1>
-  <h4>
-      Walnuts (100)
-  </h4>
+  <h3>Snack</h3>
+  <h6>
+      Walnuts (100 kcals)</br>
+  </h6>
 </div>
 
 <div>
@@ -84,12 +82,12 @@
 </div>
 
 <div>
-  <h1>Dinner</h1>
-  <h4>
-        Grilled Chicken (200)
-        Brussel sprouts (100)
-        Quinoa (105)
-  </h4>
+  <h3>Dinner</h3>
+  <h6>
+        Grilled Chicken (200 kcals)</br>
+        Brussel sprouts (100 kcals)</br>
+        Quinoa (105 kcals)</br>
+  </h6>
 </div>
 
 <div>
@@ -97,15 +95,129 @@
 </div>
 </div>
 
+<!--Second Recipe-->
+<div id="1500cal" style="display:none">
+  <h1>1500 Cal Diet</h1>
+  <hr>
+    <div>
+      <h3>Breakfast</h3>
+      <h5>
+          Granola (120 kcals)</br>
+          Greek yogurt (120 kcals)</br>
+          Blueberries (40 kcals)</br>
+      </h5>
+    </div>
+
+    <div>
+      <h3>Snack</h3>
+      <h6>
+          Orange (70 kcals)</br>
+      </h6>
+    </div>
+    <div>
+      <p>By noon: 350 Calories    </p>
+    </div>
+
+    <div>
+      <h3>Lunch</h3>
+      <h6>
+          Chicken and vegetable soup (300 kcals)</br>
+          Bread (100 kcals)</br>
+      </h6>
+    </div>
+
+    <div>
+      <h3>Snack</h3>
+      <h6>
+          Apple (75 kcals)</br>
+          Peanut butter (75 kcals)</br>
+      </h6>
+    </div>
+    <div>
+      <p>By evening: 550 Calories    </p>
+    </div>
+
+    <div>
+      <h3>Dinner</h3>
+      <h6>
+          Steak (375 kcals)</br>
+          Mashed potatoes (150 kcals)</br>
+          Asparagus (75 kcals)</br>
+      </h6>
+      </div>
+      <div>
+      <p>At dinner: 600 Calories    </p>
+    </div>
+</div>
+
+<!--Third Recipe-->
+<div id="2000cal" style="display:inline-block;">
+  <h3>2000 Cal Diet</h3>
+  <hr>
+    <div>
+      <h3>Breakfast</h3>
+      <h6>
+          Buttered toast (150 kcals)
+          Egg (80 kcals)
+          Banana (90 kcals)
+          Almonds (170 kcals)
+      </h6>
+    </div>
+
+    <div>
+      <h3>Snack</h3>
+      <h6>
+          Greek yogurt (120 kcals)
+          Blueberries (40 kcals)
+      </h6>
+    </div>
+    <div>
+      <p>By noon: 650 Calories </p>
+    </div>
+
+    <div>
+      <h3>Lunch</h3>
+      <h6>
+          Grilled chicken (225 kcals)
+          Grilled vegetables (125 kcals)
+          Pasta (185 kcals)
+      </h6>
+    </div>
+
+    <div>
+      <h3>Snack</h3>
+      <h6>
+          Hummus (50 kcals)
+          Baby carrots (35 kcals)
+          Crackers (65 kcals)
+      </h6>
+    </div>
+    <div>
+      <p>By dinner: 685 Calories </p>
+    </div>
+
+    <div>
+      <h3>Dinner</h3>
+      <h6>
+          Grilled salmon (225 kcals)
+          Brown rice (175 kcals)
+          Green beans (100 kcals)
+          Walnuts (165 kcals)
+      </h6>
+    </div>
+    <div>
+      <p>At dinner: 665 Calories </p>
+    </div>
+</div>
 
             </div>
           </div>
           <div id="bim" class="card" style="width:20%;">
-            <h3>BMI rate</h3>
+            <h3>BMI Rate:</h3>
             <p id="bmi"></p>
           </div>
           <div id="cals" class="card" style="width:20%;">
-            <h3>Calories</h3>
+            <h3>Calories:</h3>
             <p id="cal"></p>
           </div>
           <div id="hg" class="card" style="width: 43%">
@@ -114,9 +226,10 @@
            <div class="container">
             <div class="progress">
               <div id="bar" class="progress-bar"></div>
+
             </div>
           </div>
-
+            <button class="btn" onclick="change_som('second','third')"><span>Check Intake</span></button>
          </div>
         </div>
       </div>
