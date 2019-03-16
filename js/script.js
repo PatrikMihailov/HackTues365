@@ -1,4 +1,4 @@
-const GRADIENT = ['#a8fff9','#1aff1a', '#99ff33', '#d2ff4d','#ffff80','#ffff4d','#ffdb4d','#','#ffcc00','#ff6600','#ff0000'];
+const GRADIENT = ['#a8fff9','#1aff1a', '#99ff33', '#d2ff4d','#ffff80','#ffff4d','orange','#ffcc00','#ff6600','#ff0000'];
 
 function change() {
     document.getElementById("first").style.display = "none";
@@ -16,17 +16,17 @@ function Calculate()
 
   switch (gender) {
     case "2":
-      cal = (13.75*weight)+(5*height)-(6.76*age)+66;
+      cal = ((13.75*weight)+(5*height)-(6.76*age)+66)*1.3;
       break;
     case "1":
-      cal = (9.56*weight)+(1.85*height)-(4.68*age)+655;
+      cal = ((9.56*weight)+(1.85*height)-(4.68*age)+655)*1.3;
       break;
   }
+  cal=parseInt(cal);
   print_bmi(BMI.toFixed(1));
   print_cal(cal);
   change();
-  circle_Progress_Bar();
-  color_change((100*BMI)/40);
+  color_change((100*BMI)/50);
 
 }
 
@@ -66,8 +66,8 @@ function color_change(percent){
   var colour = GRADIENT[Math.floor((percent/100)*GRADIENT.length)]; //puska stoinosti ot 0-9, pravi se za indeksi na bar-a i tei
   document.getElementById("bmi").style.color = colour;
   document.getElementById("cal").style.color = colour;
-  document.getElementById("bmi").style.fontSize = "55px";
-  document.getElementById("cal").style.fontSize = "55px";
+  document.getElementById("bmi").style.fontSize = "50px";
+  document.getElementById("cal").style.fontSize = "50px";
 
   document.getElementById("recipe").style.borderColor = colour;
 
@@ -85,36 +85,3 @@ function color_change(percent){
 //    temp =  parseNumber(document.getElementById(id).value);
   //  sum = sum+temp;
 //}
-
-function circle_Progress_Bar()
-{
-  var container = document.getElementById("container");
-  var bar = new ProgressBar.Circle('#container', {
-    color: 'red',
-    strokeWidth: 5,
-    trailWidth: 2,
-    easing: 'easeInOut',
-    duration: 400,
-    text: {
-      autoStyleContainer: false
-    },
-    from: { color: '#ff6347', width: 4 },
-    to: { color: '#aa0000', width: 4 },
-    step: function(state, circle) {
-      circle.path.setAttribute('stroke', state.color);
-      circle.path.setAttribute('stroke-width', state.width);
-
-      var value = Math.round(circle.value() * 2000);
-      if (value === 0) {
-        circle.setText('');
-      } else {
-        circle.setText(value);
-      }
-
-    }
-  });
-  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-  bar.text.style.fontSize = '3.5rem';
-
-  bar.animate(1);
-}

@@ -263,11 +263,3 @@ h1 {
     padding: 0;
   }
 }
-
-#container {
-  margin: 20px;
-  width: 200px;
-  height: 200px;
-  position: relative;
-  z-index: 2;
-}
