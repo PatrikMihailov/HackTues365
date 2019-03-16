@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <html>
 
     <head>
-        <meta charset = "utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>DietManager</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-
+      <meta charset = "utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Estimation</title>
+      <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-      <div style = "display:block" id="first">
-      <form  class="login-box" action="">
-            <h1>BMI calculator</h1>
-            <div class="textbox">
-              <span class="tooltip">Type your username!</span>
-              <input id="height" type="text" placeholder="Height" name="" onclick="this.value = ''">
-            </div>
-            <div class="textbox">
-              <span class="tooltip">Type your  here!</span>
-              <input id="weight" type="text" placeholder="Weight" name="" onclick="this.value = ''">
-            </div>
-            <div class="textbox">
-              <span class="tooltip">Re-enter your password!</span>
-              <input id="age" type="text" placeholder="Age" name="" onclick="this.value = ''">
-            </div>
-            <div class="textbox">
-              <span class="tooltip">male or female</span>
-              <input id="gender" type="text" placeholder="Biological gender" name="" onclick="this.value = ''">
-            </div>
-              <button type="button" class="btn" onclick=Calculate()>Calculate</button>
-      </form>
-    </div>
-    <div id="second" style = "display: none">
-      <form class="login-box" action="">
 
-         <h1>BMI rate</h1>
-         <p id="bmi"></p>
-       </form>
+        <div id="first" style="display:block">
+          <form class="login-box" onsubmit="return false;">
+            <div style="font-family: monospace; text-align: center; font-size: 30px">
+              <h1>Diet Manager</h1>
+            </div>
+            <div class="textbox" style="text-align: center;">
+              <input id="height" type="text" placeholder="Height (cm)" name="" value="">
+              <input id="weight" type="text" placeholder="Weight (kg)" name="" value="">
+              <input id="age" type="text" placeholder="Age" name="" value="">
+            </div>
 
-     </div>
+            <div class="choicebox" id="gender">
+              <select>
+                <option value="0">Gender (DropDown)</option>
+                <option value="1">Female</option>
+                <option value="2">Male</option>
+              </select>
+            </div>
+            <p style="text-align: center;"><button onclick=Calculate() class="btn"><span>Generate Diet</span></button>
+        </form>
+      </div>
+
+      <div id="second" style="display:none">
+        <form class="login-box" action="">
+          <h1>BMI rate</h1>
+          <p id="bmi"></p>
+        </form>
+      </div>
+
+      <script src="js/script.js"></script>
+      <script src="js/dropdown.js"></script>
     </body>
 </html>
