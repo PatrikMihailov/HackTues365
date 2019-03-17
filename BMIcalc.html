@@ -235,16 +235,20 @@
       </div>
 
       <div id="third" style="display:none">
-        <div style="font-family: monospace; text-align: left; font-size: 30px">
-          <button id="cola" style="float:left; display: block;" class="btn" type="button" name="button" onclick="Cals('cola')" value='10'>Coca-Cola</button><input placeholder="Enter amount here(ml)" id="amount"></input><br>
-          <button id="chocolate" class="btn" style="float:left; display: block;" type="button" name="button" onclick="Cals('chocolate')" value='0,54'>Chocolate</button><input placeholder="Enter amount here(g)" id="amount"></input><br>
-          <button id="crackers" class="btn" type="button" style="float:left; display: block;" name="button" onclick="Cals('crackers')" value='0,4'>Crackers</button><input placeholder="Enter amount here(g)" id="amount"></input><br>
-          <button id="popcorn" class="btn" type="button" name="button" style="float:left; display: block;" onclick="Cals('popcorn')" value='0,4'>Popcorn</button><input placeholder="Enter amount here(g)" id="amount"></input><br>
-          <button id="coffee" class="btn" type="button" name="button" style="float:left; display: block;" onclick="Cals('coffee')" value='43'>Coffee</button><input placeholder="Enter amount here(ml)" id="amount"></input><br>
-          <button id="chips" class="btn" type="button" name="button" style="float:left; display: block;" onclick="Cals('chips')" value='1'>Chips</button><input placeholder="Enter amount here(g)" id="amount"></input><br>
-          <button id="cake" class="btn" type="button" name="button" style="float:left; display: block;" onclick="Cals('cake')" value='2'>Cake</button><input placeholder="Enter amount here(g)" id="amount"></input><br>
-
+        <div style="font-family: monospace;float:left; font-size: 30px">
+          <button id="cola" style="display: inline-block;" class="btn" type="button" name="button" onclick="Cals('cola')" value='10'>Coca-Cola</button><input placeholder="Enter amount here(ml)" id="amount"></input><br>
+          <button id="chocolate" class="btn" style="display: inline-block;" type="button" name="button" onclick="Cals('chocolate')" value='0,54'>Chocolate</button><input placeholder="Enter amount here(g)" id="amount"></input><br>
+          <button id="crackers" class="btn" type="button" style="display: inline-block;" name="button" onclick="Cals('crackers')" value='0,4'>Crackers</button><input placeholder="Enter amount here(g)" id="amount"></input><br>
+          <button id="popcorn" class="btn" type="button" name="button" style="display: inline-block;" onclick="Cals('popcorn')" value='0,4'>Popcorn</button><input placeholder="Enter amount here(g)" id="amount"></input><br>
+          <button id="coffee" class="btn" type="button" name="button" style="display: inline-block;" onclick="Cals('coffee')" value='43'>Coffee</button><input placeholder="Enter amount here(ml)" id="amount"></input><br>
         </div>
+
+        <div id="calinttab" style="width: 50%">
+         <h2>Calories Intake</h2>
+         <div class="container" style="float: right; display: inline-block;">
+         </div>
+       </div>
+      </div>
       </div>
       <script src="js/script.js"></script>
       <script src="js/dropdown.js"></script>
