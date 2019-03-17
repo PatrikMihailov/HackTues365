@@ -242,7 +242,7 @@ h1 {
   margin: 20px;
   box-sizing: border-box;
   border-radius: 15px;
-  float: right;
+  float: left;
   font-style: normal;
   text-align: center;
   border-width: 9px;
@@ -255,6 +255,15 @@ h1 {
   display: inline-block;
   clear: both;
   box-sizing: border-box;
+}
+
+#amount{
+  font-size: 15pt;
+  border-radius: 5px;
+  border-color: #00bacf;
+  font-family: monospace;
+  border-style: solid;
+  display: block;
 }
 
 @media screen and (max-width: 800px) {

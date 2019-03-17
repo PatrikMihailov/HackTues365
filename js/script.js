@@ -1,4 +1,4 @@
-const GRADIENT = ['#a8fff9','#1aff1a', '#99ff33', '#d2ff4d','#ffff80','#ffff4d','orange','#ffcc00','#ff6600','#ff0000'];
+const GRADIENT = ['#a8fff9','#1aff1a', '#99ff33', '#f6ff4d','#ffff80','#ffff00','orange','#ffcc00','#ff6600','#ff0000'];
 
 function change() {
     document.getElementById("first").style.display = "none";
@@ -7,6 +7,7 @@ function change() {
 
 function Calculate()
 {
+  debugger
   var height = parseFloat(document.getElementById("height").value);
   var weight = parseFloat(document.getElementById("weight").value);
   var age = parseFloat(document.getElementById("age").value);
@@ -16,17 +17,18 @@ function Calculate()
 
   switch (gender) {
     case "2":
-      cal = ((13.75*weight)+(5*height)-(6.76*age)+66)*1.3;
+      cal = ((13.75*weight)+(5*height)-(6.76*age)+66)*1.1;
       break;
     case "1":
-      cal = ((9.56*weight)+(1.85*height)-(4.68*age)+655)*1.3;
+      cal = ((9.56*weight)+(1.85*height)-(4.68*age)+655)*1.1;
       break;
   }
   cal=parseInt(cal);
+  change_diet(cal);
   print_bmi(BMI.toFixed(1));
   print_cal(cal);
   change();
-  color_change((100*BMI)/50);
+  color_change((100*BMI)/40);
 
 }
 
@@ -35,14 +37,27 @@ var total_calories=0;
 function Cals(arg) {
   switch(arg){
     case "cola":
-      total_calories+=parseInt(document.getElementById(arg).value);
+      total_calories+=(parseInt(document.getElementById(arg).value))*(parseInt(document.getElementById(amount).value));
       break;
     case "coffee":
-      total_calories+=parseInt(document.getElementById(arg).value);
+      total_calories+=(parseInt(document.getElementById(arg).value))*(parseInt(document.getElementById(amount).value));
       break;
-    case "button3":
-      total_calories+=parseInt(document.getElementById(arg).value);
+    case "chocolate":
+      total_calories+=(parseInt(document.getElementById(arg).value))*(parseInt(document.getElementById(amount).value));
       break;
+    case "cake":
+      total_calories+=(parseInt(document.getElementById(arg).value))*(parseInt(document.getElementById(amount).value));
+      break;
+    case "chocolate":
+      total_calories+=(parseInt(document.getElementById(arg).value))*(parseInt(document.getElementById(amount).value));
+      break;
+    case "chips":
+      total_calories+=(parseInt(document.getElementById(arg).value))*(parseInt(document.getElementById(amount).value));
+      break;
+    case "others":
+      total_calories+=(parseInt(document.getElementById(arg).value))*(parseInt(document.getElementById(amount).value));
+      break;
+
     }
 }
 
@@ -77,6 +92,26 @@ function color_change(percent){
 
   document.getElementById("bar").style.width = percent + '%';
   document.getElementById("bar").style.backgroundColor = colour;
+}
+
+function change_diet(cal){
+  if(cal<=1700){
+    document.getElementById("1700cal").style.display="inline-block";
+    document.getElementById("2200cal").style.display="none";
+    document.getElementById("2700cal").style.display="none";
+  }
+
+  if(cal>1700 && cal<=2200){
+    document.getElementById("1700cal").style.display="none";
+    document.getElementById("2200cal").style.display="inline-block";
+    document.getElementById("2700cal").style.display="none";
+  }
+
+  if(cal>2200){
+    document.getElementById("1700cal").style.display="none";
+    document.getElementById("2200cal").style.display="none";
+    document.getElementById("2700cal").style.display="inline-block";
+  }
 }
  //var sum = 0;
  //var temp = 0;
